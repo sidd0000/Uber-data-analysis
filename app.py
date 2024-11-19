@@ -3,8 +3,9 @@ import joblib
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from datetime import datetime
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 # Load the trained models and scaler
 scaler = joblib.load('scaler.pkl')
